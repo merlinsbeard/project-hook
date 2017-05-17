@@ -1,0 +1,5 @@
+venv
+*.pyc
+*.swo
+*.sqlite3
+*.swp
