@@ -9,3 +9,7 @@ DATABASES = {
     'default': env.db(),
 }
 
+INSTALLED_APPS = [
+    'rest_framework',
+    'hooker',
+        ] + INSTALLED_APPS
