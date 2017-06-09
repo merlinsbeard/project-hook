@@ -13,7 +13,7 @@ class Prompt(models.Model):
 
 class PromptComment(models.Model):
     title = models.ForeignKey(Prompt)
-    link = models.URLField()
+    slug = models.SlugField(unique=True)
     comment = models.TextField()
     author = models.CharField(max_length=255)
 
