@@ -1,4 +1,18 @@
+{% extends 'layout.html' %}
+
+
+{% block body %}
+<div class="container">
+
 <h1>PROMPTS</h1>
 
-{{ object_list }}
+<ul>
+{% for object in object_list %}
+    <li>
+        <a href="{{ object.get_absolute_url }}">{{ object.title }}</a>
+    </li>
+{% endfor %}
 
+</ul>
+</div>
+{% endblock %}

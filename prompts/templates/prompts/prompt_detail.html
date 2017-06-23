@@ -1,0 +1,30 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+<div class="container">
+<h1>{{ object.title | title }}</h1>
+
+{{ object.link }}
+
+<p>Saved Comments:</p>
+
+
+{% for comment in object.promptcomment_set.all %}
+<ul>
+    <li>Author: {{ comment.author }}</li>
+    <li>Slug: <a href="{{ comment.prompt_url }}">
+        {{ comment.prompt_url}}
+        </a>
+    </li>
+</ul>
+<div class="story">
+    <p>{{ comment.story | linebreaks }}</p>
+</div>
+
+{% endfor %}
+</div>
+
+{% endblock %}
+
+
+
