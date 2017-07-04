@@ -4,7 +4,6 @@ from django.urls import reverse
 
 class Prompt(models.Model):
     title = models.CharField(max_length=255)
-    link = models.URLField()
     slug = models.SlugField(max_length=255, unique=True)
 
     def __str__(self):
