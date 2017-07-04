@@ -2,7 +2,7 @@ import environ
 from .base import *
 
 env = environ.Env()
-env.read_env('.env_dev')
+env.read_env('local.env')
 
 ALLOWED_HOSTS = ['*']
 
@@ -16,3 +16,9 @@ INSTALLED_APPS = [
     'hooker',
     'prompts',
         ] + INSTALLED_APPS
+
+# Reddit secrets
+REDDIT_SECRET = env("REDDIT_SECRET")
+REDDIT_ID = env("REDDIT_ID")
+REDDIT_USERNAME = env("REDDIT_USERNAME")
+REDDIT_PASSWORD = env("REDDIT_PASSWORD")
