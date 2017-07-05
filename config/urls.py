@@ -19,5 +19,8 @@ from django.contrib import admin
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     # URL for hooker
-    url(r'hooker/', include('hooker.urls', namespace='hooker'))
+    url(r'hooker/', include('hooker.urls', namespace='hooker')),
+    # Prompts
+    url(r'^prompts/', include('prompts.urls', namespace='prompts')),
+    url(r'^v1/', include('v1.urls', namespace='v1')),
 ]
