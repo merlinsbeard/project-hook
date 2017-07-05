@@ -48,4 +48,4 @@ class PromptSlug(APIView):
             return Response(
                     {"message":"Already Exists"},
                     status.HTTP_423_LOCKED)
-            return Response({"message": "success"})
+        return Response({"message": "success"})
