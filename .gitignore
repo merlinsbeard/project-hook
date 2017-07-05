@@ -3,3 +3,6 @@ venv
 *.swo
 *.sqlite3
 *.swp
+static/admin
+static/rest_framework
+static/debug_toolbar
