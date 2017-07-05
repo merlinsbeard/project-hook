@@ -9,11 +9,11 @@ class PromptSerializer(serializers.ModelSerializer):
         fields = ('title', 'slug')
 
 class PromptCommentSerializer(serializers.ModelSerializer):
-    submission = PromptSerializer()
+    title= PromptSerializer()
 
     class Meta:
         model = PromptComment
-        fields = ('submission',
+        fields = ('title',
                   'author',
                   'slug',
                   'story')
